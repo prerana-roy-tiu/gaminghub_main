@@ -1,0 +1,184 @@
+:root {
+  --bg: #0b0f14;
+  --card: #121824;
+  --muted: #99a3b3;
+  --text: #e7eefc;
+  --brand: #7aa2ff;
+  --accent: #9be7ff;
+  --danger: #ff7a7a;
+  --ring: #2a3a55;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  height: 100%;
+  background: radial-gradient(1200px 600px at 80% -10%, #122036 0%, transparent 60%),
+    linear-gradient(180deg, #0b0f14 0%, #0b0f14 100%);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.container {
+  max-width: 720px;
+  margin: clamp(24px, 6vh, 64px) auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 1.2rem + 2vw, 2.4rem);
+  line-height: 1.1;
+  margin: 8px 0 20px;
+  letter-spacing: 0.2px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(122, 162, 255, 0.15);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input,
+select {
+  width: 100%;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--ring);
+  border-radius: 12px;
+  padding: 12px 12px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(122, 162, 255, 0.25);
+}
+
+select#unit {
+  flex: 1;
+  max-width: 120px;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(180deg, var(--brand), #597fe6);
+  color: #0b1020;
+  box-shadow: 0 10px 20px rgba(122, 162, 255, 0.25);
+  transition: transform .06s ease, filter .15s ease;
+  margin-right: 8px;
+}
+
+.btn:hover {
+  filter: brightness(1.05)
+}
+
+.btn:active {
+  transform: translateY(1px)
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px dashed var(--ring);
+  box-shadow: none;
+}
+
+.error {
+  min-height: 1.2em;
+  color: var(--danger);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.result {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.result h2 {
+  margin: 4px 0 8px;
+  font-size: 1.2rem;
+  color: var(--accent);
+  letter-spacing: 0.3px;
+}
+
+.result-value {
+  font-size: clamp(2rem, 1.5rem + 3vw, 3rem);
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+.subtext {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.footnote {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.top img {
+  height: 40px;
+  padding: 5px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  select#unit {
+    max-width: 100%;
+  }
+
+  .result-value {
+    font-size: 2rem;
+  }
+}

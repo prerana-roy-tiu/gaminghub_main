@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weight on Other Planets</title>
+  <link rel="stylesheet" href="Weight.css" />
+  <link rel="icon" type="image/x-icon" href="./favicon_1.jpg">
+</head>
+
+<body>
+  <div class="top">
+    <a href="fun.html"><img src="./return.png" alt="Return"></a>
+  </div>
+  <main class="container">
+    <h1>Weight on Other Planets</h1>
+
+    <form id="weight-form" class="card" autocomplete="off" novalidate>
+      <div class="field">
+        <label for="weight">Your weight on Earth</label>
+        <div class="input-row">
+          <input id="weight" name="weight" type="number" inputmode="decimal" min="0" step="0.1" placeholder="e.g., 62.5"
+            required />
+          <select id="unit" name="unit" aria-label="Unit">
+            <option value="kg" selected>kg</option>
+            <option value="lb">lb</option>
+          </select>
+        </div>
+        <p class="hint">Enter your current body weight on Earth.</p>
+      </div>
+
+      <div class="field">
+        <label for="planet">Choose a planet (or the Moon/Sun)</label>
+        <select id="planet" name="planet" required>
+          <option value="mercury">Mercury (0.38g)</option>
+          <option value="venus">Venus (0.91g)</option>
+          <option value="earth">Earth (1.00g)</option>
+          <option value="moon">Moon (0.165g)</option>
+          <option value="mars">Mars (0.38g)</option>
+          <option value="jupiter">Jupiter (2.34g)</option>
+          <option value="saturn">Saturn (1.06g)</option>
+          <option value="uranus">Uranus (0.92g)</option>
+          <option value="neptune">Neptune (1.19g)</option>
+          <option value="pluto">Pluto (0.06g)</option>
+          <option value="sun">Sun (27.01g)</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Calculate</button>
+      <p id="error" class="error" role="alert" aria-live="polite"></p>
+    </form>
+
+    <section class="result card" aria-live="polite" id="result-section" hidden>
+      <h2 id="planet-name">—</h2>
+      <p class="result-value">
+        <span id="converted">—</span>
+        <span id="result-unit">kg</span>
+      </p>
+      <p class="subtext" id="detail">—</p>
+    </section>
+
+    <footer class="footnote">
+      <p>
+        This tool treats your input as your <strong>Earth weight</strong> and scales it by each body's surface gravity.
+        Output unit matches your selection (kg or lb).
+        <strong>This is for fun purpose.So have fun everyone</strong>
+      </p>
+    </footer>
+  </main>
+
+
+
+  <script src="Weight.js"></script>
+</body>
+
+</html>

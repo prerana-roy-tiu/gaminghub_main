@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count Your Heartbeats Till Now</title>
+  <link rel="stylesheet" href="Heartbeat.css">
+  <link rel="icon" type="image/x-icon" href="./favicon_1.jpg">
+</head>
+
+<body>
+  <div class="top">
+    <a href="fun.html"><img src="./return.png" alt="Return"></a>
+  </div>
+  <main class="container">
+    <h1>💓 Count Your Heartbeats Till Now</h1>
+
+    <form id="heartbeat-form" class="card">
+      <label for="dob">Enter your Date of Birth:</label>
+      <input type="date" id="dob" required>
+      <button type="submit" class="btn">Calculate</button>
+      <p id="error" class="error"></p>
+    </form>
+
+    <section id="result" class="result card" hidden>
+      <h2>Estimated Heartbeats 💓</h2>
+      <div class="heart"></div>
+      <p id="beats" class="beats">—</p>
+      <p class="subtext">Based on an average of 72 beats per minute.</p>
+    </section>
+
+    <audio id="heartbeat-sound" src="Heartbeat Sound.mp3" preload="auto"></audio>
+  </main>
+
+  <script src="Heartbeat.js"></script>
+</body>
+
+</html>

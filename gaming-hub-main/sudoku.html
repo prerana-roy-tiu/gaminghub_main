@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="sudoku.css">
+  <link rel="icon" type="image/x-icon" href="./favicon_1.jpg">
+</head>
+
+<body>
+  <div class="top">
+    <a href="challenges.html"><img src="./return.png" alt="Return"></a>
+  </div>
+  <div class="app">
+    <div class="board-wrap">
+      <div class="toolbar">
+        <div class="group">
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty" title="Difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+            <option value="expert">Expert</option>
+          </select>
+          <button id="newBtn" class="primary">New Puzzle</button>
+        </div>
+        <div class="group">
+          <button id="checkBtn">Check Errors</button>
+          <button id="hintBtn">Hint</button>
+          <button id="solveBtn" class="warn">Solve</button>
+          <button id="clearBtn">Clear</button>
+          <button id="notesBtn" aria-pressed="false">Notes: Off</button>
+        </div>
+        <div class="hud">
+          <span>⏱️ <span id="timer">00:00</span></span>
+          <span>•</span>
+          <span>Filled: <span id="filled">0</span>/81</span>
+        </div>
+      </div>
+
+      <div id="board" class="board" role="grid" aria-label="Sudoku board"></div>
+
+      <div class="legend">
+        <span><i class="dot given"></i> Given</span>
+        <span><i class="dot sel"></i> Selected</span>
+        <span><i class="dot hi"></i> Same row/col/box</span>
+        <span><i class="dot con"></i> Conflict</span>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="panel">
+        <h3>Number Pad</h3>
+        <div class="numpad" id="numpad"></div>
+      </div>
+      <div class="panel">
+        <h3>How to play</h3>
+        <ol style="margin:0; padding-left:18px; color:#cbd5e1; line-height:1.6">
+          <li>Click a cell, then use 1–9 on your keyboard or the number pad.</li>
+          <li>Toggle <b>Notes</b> to jot pencil marks. Click the same number again to remove it.</li>
+          <li><b>Check Errors</b> highlights conflicts. <b>Hint</b> fills one correct cell.</li>
+          <li><b>Solve</b> completes the puzzle using backtracking.</li>
+        </ol>
+      </div>
+      <div class="footer panel">Enjoy your game.</div>
+    </div>
+  </div>
+</body>
+<script src="sudoku.js"></script>
+
+</html>

@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f4f4f9;
+}
+
+.top {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.top img {
+    height: 40px;
+    padding: 5px;
+    margin: 5px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(70px, 100px));
+    grid-template-rows: repeat(3, minmax(70px, 100px));
+    gap: 5px;
+}
+
+.cell {
+    background: white;
+    border: 2px solid #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cell.taken {
+    cursor: not-allowed;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+@media (max-width: 480px) {
+    .board {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(3, 70px);
+    }
+}

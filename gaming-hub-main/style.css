@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3f3f3, #e2e2e2);
+    background-image: url(./123.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#one {
+    font-size: 4.5rem;
+    color: #e6ecf3;
+}
+
+#two {
+    font-size: 2.5rem;
+    color: #eaeef2;
+}
+
+
+.slide-in-bottom {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: slideInBottom 1.2s ease-out forwards;
+}
+
+.slide-in-bottom.delay {
+    animation-delay: 0.5s;
+}
+
+@keyframes slideInBottom {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome box */
+.welcome {
+    background-color: #fff;
+    color: #b22222;
+    height: auto;
+    width: 40vw;
+    border: 2px solid #8b0000;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    animation: boxFadeIn 1.5s ease-in forwards;
+}
+
+@keyframes boxFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.welcome p {
+    margin-bottom: 15px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInText 2s ease-in forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome:hover button {
+    background-color: #8b0000;
+    transform: scale(1.1);
+}
+
+.welcome button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #b22222;
+    color: #fff;
+    transition: 0.3s;
+    opacity: 0;
+    animation: fadeInBtn 1.5s ease-in forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeInBtn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    background-color: #fff5f5;
+}
+
+.welcome a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media (max-width: 575.98px) {
+    #one {
+        font-size: 2.2rem;
+    }
+
+    #two {
+        font-size: 1.2rem;
+    }
+
+    .welcome {
+        width: 85vw;
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .welcome button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #one {
+        font-size: 2.8rem;
+    }
+
+    #two {
+        font-size: 1.5rem;
+    }
+
+    .welcome {
+        width: 70vw;
+        font-size: 1rem;
+    }
+
+    .welcome button {
+        padding: 9px 18px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #one {
+        font-size: 3.5rem;
+    }
+
+    #two {
+        font-size: 1.8rem;
+    }
+
+    .welcome {
+        width: 55vw;
+        font-size: 1.05rem;
+    }
+
+    .welcome button {
+        font-size: 1.05rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #one {
+        font-size: 4rem;
+    }
+
+    #two {
+        font-size: 2.2rem;
+    }
+
+    .welcome {
+        width: 45vw;
+        font-size: 1.1rem;
+    }
+
+    .welcome button {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #one {
+        font-size: 4.5rem;
+    }
+
+    #two {
+        font-size: 2.5rem;
+    }
+
+    .welcome {
+        width: 40vw;
+        font-size: 1.2rem;
+    }
+
+    .welcome button {
+        font-size: 1.15rem;
+    }
+}

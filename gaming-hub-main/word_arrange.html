@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Arrange Game</title>
+  <link rel="stylesheet" href="word_arrange.css">
+  <link rel="icon" type="image/x-icon" href="./favicon_1.jpg">
+</head>
+<body>
+  <header>
+    <div class="top">
+        <a href="educational.html"><img src="./return.png" alt="Return"></a>
+    </div>
+    <h1>🔠 Word Arrange Game</h1>
+  </header>
+  <main>
+    <section id="wordArrange" class="game-section active">
+      <p>Rearrange the letters to form the correct word:</p>
+      <div id="shuffledWord" class="shuffled-word"></div>
+      <input type="text" id="wordInput" placeholder="Type your answer">
+      <button onclick="checkWord()">Submit</button>
+      <button onclick="newWord()">Next Word ⏭</button>
+      <p id="wordResult"></p>
+      <p>Score: <span id="score">0</span></p>
+    </section>
+  </main>
+  <script src="word_arrange.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=DynaPuff:wght@400..700&family=Headland+One&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Neuton', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #eef2f6;
+    color: #222222;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1; 
+}
+
+
+.top img{
+    height: 40px;
+    padding: 10px;
+    
+}
+
+
+#header {
+    margin-top: 5%;
+    font-size: 4.5rem;
+    text-align: center;
+    color: white;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: 52vh;
+    width: 20vw;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 90, 170, 0.25);
+}
+
+.card-content p{
+    font-size: 400px;
+}
+.card-pic1 {
+    height: 30vh;
+    width: 20vw;
+    background-image: url(Education5.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.card-pic2 {
+    height: 30vh;
+    width: 20vw;
+    background-image: url(puzzle3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.card-pic3 {
+    height: 30vh;
+    width: 20vw;
+    background-image: url(challenge\ 2.0.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.card-mid {
+    font-size: 18px;
+    margin: 20px;
+    padding: 5px;
+    width: 15vw;
+}
+
+.card-mid ul {
+    list-style: none;
+}
+
+.card-heading,
+.card-content {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-content p {
+    font-size: 16px;
+}
+
+.last {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.last button {
+    border: none;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.last button:hover {
+   background-color: #1e3a8a;
+}
+
+#first {
+    margin-top: 5%;
+}
+
+@media (max-width: 575.98px) {
+    #header {
+        font-size: 2rem;
+        margin-top: 10%;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80vw;
+        height: auto;
+    }
+
+    .card-pic1,
+    .card-pic2,
+    .card-pic3 {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+    }
+
+    .card-mid {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .last button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #header {
+        font-size: 2.5rem;
+    }
+
+    .main {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 45vw;
+        height: auto;
+    }
+
+    .card-pic1,
+    .card-pic2,
+    .card-pic3 {
+        width: 100%;
+        height: 220px;
+        background-size: cover;
+    }
+
+    .card-mid {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #header {
+        font-size: 3rem;
+    }
+
+    .card {
+        width: 40vw;
+        height: auto;
+    }
+
+    .card-pic1,
+    .card-pic2,
+    .card-pic3 {
+        width: 100%;
+        height: 240px;
+    }
+
+    .card-mid {
+        width: 90%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #header {
+        font-size: 3.5rem;
+    }
+
+    .card {
+        width: 28vw;
+        height: auto;
+    }
+
+    .card-pic1,
+    .card-pic2,
+    .card-pic3 {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #header {
+        font-size: 4rem;
+    }
+
+    .card {
+        width: 20vw;
+    }
+
+    .card-pic1,
+    .card-pic2,
+    .card-pic3 {
+        height: 30vh;
+    }
+}
